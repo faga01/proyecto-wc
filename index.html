@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 1</title>
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+
+<body>
+
+    <div class="seccion_1">
+
+        <div class="seccion_1_slide">
+
+            <div class="mySlides slide_2 deslizar">
+                <img class="seccion_1_fondo" src="/imagenes/bg-herooo.png" alt="" style="width:100%">
+                
+            </div>
+
+            <div class="mySlides slide_2 deslizar">
+                <img class="seccion_1_fondo" src="/imagenes/fondo3.png" alt="" style="width:100%">
+               
+            </div>
+
+            <div class="mySlides slide_2 deslizar">
+                <img class="seccion_1_fondo" src="/imagenes/bg-herooo2.png" alt="" style="width:100%">
+               
+            </div>
+
+        
+        </div> 
+
+        <!-- Contenido del slide -->
+
+        <div class="seccion_1_contenido">
+
+            <header class="barra_navegacion">
+                <nav class="titulo_menu">
+                    <img class="logo_wc" src="/imagenes/logo-white.svg" alt="logo_wc">
+                </nav>
+
+                <div class="menu_opciones">
+                    <i class="mdi mdi-menu"></i>
+                    <a class="enlace_menu" href="#">opcion 1</a>
+                    <a class="enlace_menu" href="#">opcion 2</a>
+                    <a class="enlace_menu" href="#">opcion 3</a>
+                </div>
+
+            </header>
+            <main class="parrafo_seccion_1">
+                <h1>Dinner for two or more <br> starting at $159 </h1>
+                <p> Shipping included Stream live or on demand. <br> You've got the hottest table in town.
+                </p>
+            </main>
+
+            <div class="botonera_seccion_1">
+                <a class=" boton_transparente seccion_1_boton_1" href="#">tell me more</a>
+                <a class="boton_verde seccion_1_boton_2" href="#">let's cook</a>
+                
+            </div>
+
+            <div class="seccion_1_redes">
+                <img class="sec1_red" id="icon_face" src="/imagenes/icon-fb.svg" alt="fcb">
+                <img class="sec1_red" src="/imagenes/icon-tw.svg" alt="twt">
+                <img class="sec1_red" src="/imagenes/icon-ig.svg" alt="istg">
+            </div>
+
+            <!--Iconos de next y previus-->
+
+            <a class="prev" onclick="plusSlides(-1)">&#x2329;</a>
+            <a class="next" onclick="plusSlides(1)">&#x232A;</a>
+
+            <!--Puntos de paso de pagina-->
+
+            <div class="barra_punto">
+
+                <span class="punto" onclick="currentSlide(1)"></span>
+                <span class="punto" onclick="currentSlide(2)"></span>
+                <span class="punto" onclick="currentSlide(3)"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- script del slide-->
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var puntos = document.getElementsByClassName("punto");
+
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < puntos.length; i++) {
+                puntos[i].className = puntos[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            puntos[slideIndex - 1].className += " active";
+
+        }
+    </script>
+
+   <!--  <script>
+
+
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementByClassName("slide_2");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 2000);
+
+
+        }
+
+    </script> -->
+
+
+    <!-- Sección pagina 2 -->
+
+    <div class="seccion_2">
+        <div class="seccion_2_encabezado">
+            <h2 id="encabezado">How It Works</h2>
+            <p>Detailed description of the ingredients, client is going to receive 
+                box and <br> recipe <br> the client is going client is going to receive client is going to receive client.</p>
+        </div>
+
+         <div class="contenedor_articulos">    
+
+            <div class="seccion_2_articulo sec_2_art_1">
+                <img class="articulo_icono" src="/imagenes/icon-chef.svg" alt="">
+                <h2><span class="seccion_2_orden">one</span></br> Book it</h2>
+                <p>If you want to cook like a chef, you've gotta cook with a chef. If you want to cook like a chef, you've
+                    gotta cook with a chef gotta cook with a chef gotta cook with a chef gotta.</p>
+                <a class="seccion_2_boton" href="#">view events</a>
+            </div>
+
+      
+
+            <div class="seccion_2_articulo sec_2_art_2">
+                <img class="articulo_icono" src="/imagenes/icon-box.svg" alt="">
+                <h2><span class="seccion_2_orden">two</span></br>Unbox it</h2>
+                <p>If you want to cook like a chef, you've gotta cook with a chef. If you want to cook like a chef, you've
+                    gotta cook with a chef cook with a chef.</p>
+                <a class="seccion_2_boton" id="boton_menus" href="#">menus</a>
+            </div>
+
+            <div class="seccion_2_articulo sec_2_art_3">
+                <img class="articulo_icono" src="/imagenes/icon-live.svg" alt="">
+                <h2><span class="seccion_2_orden">three</span></br>Cook It</h2>
+                <p>If you want to cook like a chef, you've gotta cook with a chef. If you want to cook like a chef, you've
+                    gotta cook with a chef.</p>
+                <a class="seccion_2_boton" id="boton_lets" href="#">book it!</a>
+            </div>
+
+        </div>
+
+        <div class="titulo_video">
+            <h2>What to expect from your world chef Experience:</h2>
+        </div>
+
+        <div class="seccion_2_video">
+            <video class="video_2" width="254px" height="140px" controls>
+                <source src="/imagenes/Eagle Eye Cherry   Save Tonight.mp4" type="video/mp4">
+            </video>
+            <h2>Unboxing</h2>
+            <p>If you want to cook like a chef, you've gotta cook with a chef.
+                Welcome to the interactive</p>
+            <div class="seccion_2_video_enlace">
+                <a href="#">watch now</a>
+                <img src="/imagenes/icon-video.svg" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="seccion_3">
+        <div class="seccion_3_encabezado">
+            <h2>
+                Meet Your World Chefs
+            </h2>
+            <h5 class="seccion_3_titulo_articulo">
+                on demand <span id="titulo_fecha">| april 10</span>
+            </h5>
+        </div>
+
+        <div class="seccion_3_articulo_1">
+            <h3>My family´s 3 <br> favorite dishes With <br> Chef Timothy <br> Hollingsworth</h3>
+            <p>world chef box delivery <br> through april 17</p>
+            <h6>Cutoff Dates for Ordering: Live <br> March 2 On Demand</h6>
+            <a href="#" class="boton_verde seccion_3_boton_1">view menu</a>
+            <a href="#" class="boton_transparente seccion_3_boton_2">let's cook</a>
+
+        </div>
+        <div class="seccion_3_titulo_articulo">
+            <h5>
+                premiering live <span id="titulo_fecha">April 24</span>
+            </h5>
+
+        </div>
+
+
+        <div class="seccion_3_articulo_2">
+            <img class="articulo_2_img" src="/imagenes/img-2_1.png" alt="">
+            <div class="articulo_2_contenido">
+                <h3>Dumpling <br> Party with chef <br> Shirley Chung</h3>
+                <p>world chef box <br> delivery through may 1</p>
+                <h6>Cutoff Dates for Ordering: <br> Live March 2 - On Demand</h6>
+                <a class="seccion_3_boton_3 boton_verde" href="#">save my spot</a>
+            </div>
+
+        </div>
+
+        <div class="seccion_3_articulo_3">
+            <div class="articulo_3_contenido">
+                <h3>Chef Brian Duffy <br> scenes from an <br> italian restaurant</h3>
+                <p>world chef box <br> delivery through may 1</p>
+                <h6>Cutoff Dates for Ordering: <br> Live March 2 - On Demand</h6>
+                <a class="boton_transparente seccion_3_boton_4" href="#">stream for free!</a>
+                <a class="boton_verde seccion_3_boton_5" href="#">view menu</a>
+            </div>
+            <img class="articulo_3_img" src="/imagenes/img-3_1.png" alt="chef">
+
+        </div>
+
+        <div class="seccion_3_articulo_4">
+            <div class="articulo_4_contenido">
+                <h3> <span> Chef, <br> interrupted <br> </span>5 questions in <br> 3 minutes. <br> with LA Food <br>
+                    Gang´s Andy <br> Wang</h3>
+                <p>Get to know your <br> world Chefs through<br> a food writer!</p>
+
+            </div>
+            <img class="articulo_4_img" src="/imagenes/img-4_1.png" alt="">
+
+        </div>
+
+    </div>
+
+    <div class="seccion_4">
+        <div class="seccion_4_titulo">
+            <h2>Upcoming <br> Events</h2>
+            <p>consectetur adipiscing elit. Etiam metus ligula Etiam metus ligula.</p>
+
+        </div>
+
+        <div class="seccion_4_img">
+            <img class="img_icono" src="/imagenes/icon-next-a.svg" alt="">
+            <img class="img_plato" src="/imagenes/plate-1.png" alt="">
+        </div>
+
+        <div class="seccion_4_contenido">
+            <h6 id="seccion_4_fecha">april 9 - 7:00 pm pt</h6>
+            <h2>Scenas from an <br> Italian Restaurant</h2>
+            <h5>Chef Brian Duffy <br> <span id="contenido_4_h5_no_resaltado">Cooking out of Philadelphia, PA. </span>
+            </h5>
+            <p>Philly native Chef Brian Duffy transports you in three rustic courses to the famous 9th street italian
+                market. COOK LIVE along with Chef Duffy, or in encore viewings anytime you want. It's your italian
+                restaurant. </p>
+            <a class="boton_transparente seccion_4_boton_1" href="#">Let's cook!</a>
+            <a class="boton_transparente seccion_4_boton_2" href="#">tell a friend</a>
+            <h6 id="seccion_4_reserva">Reserve your spot before 25th feb</h6>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="seccion_5">
+        <h2>FAQS</h2>
+
+        <button class="acordion">Wath designates a World Chef?</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh libero,
+                volutpat eget tempus at, mollis eu nulla. Donec ex mauris,
+                .</p>
+        </div>
+
+        <button class="acordion"> Wath is the World Chef Box? </button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh libero,
+                volutpat eget tempus at, mollis eu nulla. Donec ex mauris,
+                .</p>
+        </div>
+
+        <button class="acordion"> How long is each World Chef Event? </button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh libero,
+                volutpat eget tempus at, mollis eu nulla. Donec ex mauris,
+                .</p>
+        </div>
+
+        <button class="acordion"> where do i watch my event? </button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh libero,
+                volutpat eget tempus at, mollis eu nulla. Donec ex mauris,
+                .</p>
+        </div>
+
+        <button class="acordion"> Can i give World Chef as a gitf? </button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh libero,
+                volutpat eget tempus at, mollis eu nulla. Donec ex mauris,
+                .</p>
+        </div>
+
+    </div>
+
+    <div class="seccion_6">
+        <div class="seccion_6_contenido">
+            <h2>Ready to <br> get started? </h2>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh libero,
+                volutpat eget tempus at, mollis eu nulla.</p> -->
+            <a class="boton_transparente seccion_6_boton" href="#">register now</a>
+        </div>
+
+    </div>
+    <div class="seccion_7">
+        <div class="seccion_7_contenido">
+            <h2>World-class chefs & their food in your home</h2>
+           <!--  <label for="email" id="label_email">sign up for our newsletter</label> -->
+            <input type="email" id="email_registro" value="name@company.com">
+            <input type="submit" id="boton_registro" value="sign up">
+            <h5>contact us</h5>
+            <div>
+
+
+            </div>
+            <div class="seccion_7_redes">
+                <img src="/imagenes/icon-fb.svg" alt="fcb">
+                <img src="/imagenes/icon-tw.svg" alt="twt">
+                <img src="/imagenes/icon-ig.svg" alt="istg">
+            </div>
+            <div class="seccion_7_logo">
+                <img id="logo_ws" src="/imagenes/logo-white.svg" alt="logo_wc">
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <p id="copyright">&copy Copyright Wolrdchef 2021. All Rights Reserved. This site is intented for a U.S.
+            audience.</p>
+        <p id="privacy">Privacy - Terms and conditions</p>
+        
+            
+        <!-- <a class="boton_ayuda" href="#">
+            <img class="logo_ayuda" src="/imagenes/ayuda.svg" alt="help">
+            <p>Ayuda</p> 
+        </a> -->
+
+        <button class="boton_ayuda">
+            <img class="logo_ayuda" src="/imagenes/icon-help.svg" alt="help">
+            <p>Ayuda</p>
+        </button>
+      
+
+    </footer>
+
+    <script>
+        var acc = document.getElementsByClassName("acordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
