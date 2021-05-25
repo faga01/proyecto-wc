@@ -1,0 +1,123 @@
+.seccion_4_titulo {
+    background-image: url(../imagenes/bg-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $blanco;
+    padding: 28px 26px;
+    h2 {
+        font-size: 2.2rem;
+        font-weight: normal;
+        line-height: 1;
+    }
+    p {
+        font-size: 13px;
+        padding-top: 2px;
+        line-height: 1.7;
+        color: $blanco;
+    }
+}
+
+.seccion_4_img {
+    background-image: url(../imagenes/img-5_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 229px;    
+    position: relative;
+    .img_icono {
+        height: 35px;
+        position: absolute;
+        left: 250px;
+        top: 18px;
+    }
+    .img_plato {
+        height: 140px;
+        position: absolute;
+        left: 150px;
+        top: 150px;
+    }
+}
+
+
+
+.seccion_4_contenido {
+    padding: 30px 20px 40px 25px;
+    #seccion_4_fecha {
+        color: $secundario;
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+    h2 {
+        font-weight: normal;
+        color: #4d434b;
+        font-size: 22px;
+        font-weight: 500;
+        margin-top: 5px;
+    }
+    h5 {
+        padding-top: 20px;
+        line-height: 1.6;
+        color: #4d434b;
+        #contenido_4_h5_no_resaltado {
+            font-weight: normal;
+            font-size: 14px;
+        }
+    }
+    p {
+        padding-top: 17px;
+        font-size: 13.5px;
+        line-height: 1.5;
+        color: #4d434b;
+    }
+    .seccion_4_boton_1 {
+        @include boton_transparente;
+        width: 126px;
+        height: 40px;
+        line-height: 40px;
+        color: $secundario;
+        border: 1px solid $secundario;
+        display: block;
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-top: 20px;
+    }
+    .seccion_4_boton_2 {
+        @include boton_transparente;
+        width: 170px;
+        height: 40px;
+        line-height: 40px;
+        color: $blanco;
+        background-color: $negro;
+        display: block;
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-top: 10px;
+    }
+    #seccion_4_reserva {
+        color: $secundario;
+        text-transform: uppercase;
+        margin-top: 7px;
+        font-size: 0.55rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+.seccion_6 {
+    background-image: url(../imagenes/bg-4_1.png);
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;  
+    .seccion_6_contenido {
+        padding: 50px 40px 50px 40px;
+        h2 {
+            color: $blanco;
+            font-size: 36.2px;
+            font-weight: 500;
+            line-height: 1;
+        }
+        /* p {
+            color: $blanco;
+            padding-top: 12px;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.8;
+        } */
+        .seccion_6_boton {
+            @include boton_transparente;
+            background-color: rgba($negro,0.2);
+            color: $blanco;
+            width: 191px;
+            height: 50px;
+            line-height: 44px;
+            font-size: 13.5px;
+            letter-spacing: 1px;
+            display: block;
+            margin-top: 27px;
+            &:hover{
+                color: $secundario;
+                border: 1.5px solid $secundario;
+            }
+        }
+    }
+      
+}
+
+
+
+
+
+

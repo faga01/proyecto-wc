@@ -1,0 +1,46 @@
+.seccion_5 {
+    border-top: 1px solid rgba($colorFuente, 0.1);
+    padding-top: 30px;
+    padding-bottom: 95px;
+    h2 {
+        text-align: center;
+        padding-bottom: 25px;
+        font-size: 2.3rem;
+        font-weight: 300;
+        color: #4d434b;
+        
+    }
+    .acordion {
+        background-color: #f5f6fb;
+        color: #625961;
+        cursor: pointer;
+        padding: 20px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 17px;
+        font-weight: 600;
+        transition: 0.4s;
+        .active, &:hover {
+            background-color: #e7dfdf;
+        } 
+    }
+    .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: #f5f6fb;
+        overflow:auto;
+        font-size: 12px;
+        letter-spacing: 0.7px;
+    }
+
+}
+
+
+
+
+
+
+
+

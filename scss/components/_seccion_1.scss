@@ -1,0 +1,294 @@
+// css de la primera seccion, Div principal
+.seccion_1 {
+     max-width: 1200px;
+     height: auto;
+     position: relative;
+     margin: auto; 
+        .seccion_1_fondo {    
+            height: 562px;
+            @media only screen and (min-width: 768px){
+                height: 568px;
+            }   
+         }
+     
+    // Div principla de tood el contenido de la seccion 1     
+    .seccion_1_contenido {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    // Diseño de la barra de navegación junto con el icono del menú
+        .barra_navegacion {
+            position: fixed;
+            width: 100%;
+            height: 60px;
+            background-color: $negro;    
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 0.5px solid rgba($colorFuente, 0.3);
+            @media only screen and (min-width: 768px){
+                background-color: rgb(42, 38, 41); 
+            }
+            .titulo_menu {
+                color: $blanco;
+                align-self: center;
+                padding-left: 27px ;
+                .logo_wc{
+                    height: 14px;
+                    cursor: pointer;
+                }
+            }
+            .menu_opciones {
+                display: flex;
+                .mdi-menu {  
+                    font-size: 24px;
+                    align-self: center;
+                    padding: 0 10px 0 8px;
+                    border-left: 1px solid rgba(255, 255, 255, 0.3);
+                    color: $blanco;
+                    cursor: pointer;
+                    
+                }
+                .enlace_menu {
+                    display: none;
+                }
+             }
+        }
+        // se encuenta el titulo y el parrafo principal de la seccion 1
+        .parrafo_seccion_1 {
+            margin-top: 175px;
+            margin-left: 18px;
+            margin-right: 20px;
+                @media only screen and (min-width:768px){
+                    margin-top: 182px;
+                }
+            h1 {
+               color: $blanco;
+               font-weight: 700;
+               //text-align: justify;  
+               font-size: 21.5px;  
+               line-height: 1.3;
+               letter-spacing: 0.6;
+               @media only screen and (min-width: 768px){
+                    font-weight: 500;
+                    line-height: 1.2;
+                    font-weight: 700; 
+                    font-size: 29px;          
+            }
+           }
+            p {
+                color: $blanco;
+                text-align: justify;
+                font-size: 18px;
+                line-height: 0.9;
+                margin-top: 15px;
+                @media only screen and(min-width:768px){
+                    font-size: 1.4rem;
+                    line-height: 1.1;
+                    color: rgba($blanco, 0.8);
+                    
+                }
+            }  
+            h1, p{
+                @media only screen and (min-width: 768px){
+                    padding-left: 77px;
+
+                }
+            }
+            
+
+        }
+        // Sector de los botones de la seccion 1
+        .botonera_seccion_1 {
+            height: auto;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+            margin-top: 30px;
+           
+
+            @media only screen and (min-width: 768px){
+                padding-left: 77px;
+                margin-top: 30px;
+            }
+            .boton_transparente {   
+                @include boton_transparente;
+            }  
+            .seccion_1_boton_1 {
+                color: $blanco;
+                background-color: rgba(0, 0, 0, 0.1);
+                font-size: 12px;
+                margin-left: 20px;
+                height: 44px;
+                line-height: 40px;
+                width: 173px;
+                
+                
+                }
+            } 
+            .boton_verde {
+                @include boton_verde;
+            }
+            .seccion_1_boton_2 {
+                color: $blanco;
+                height: 44px;
+                line-height: 40px;
+                width: 173px;
+                margin-left: 20px;
+                font-size: 12px;    
+                margin-top: 3px;
+            }
+            .seccion_1_boton_1 .seccion_1_boton_2{
+                @media only screen and(min-width: 768px){
+                margin-left: 44px; 
+            }
+
+        }
+
+    
+    }  
+
+    /* Iconos para adelantar o atrasar el slideshow  */
+ 
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        color: black;
+        font-weight: bold;
+        font-size: 12px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        @media only screen and (min-width:768px) {
+            font-size: 80px;
+            color: rgba($blanco, 0.5) ;
+            font-weight: 100;
+            top: 38%;
+            padding-right: 30px;
+            padding-left: 30px;                    
+        }
+    }
+    /* Posicion de los Iconos de next y prev del slide */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    // sector de la barra de lineas que muestra el desplazamiento del slide
+    .barra_punto {
+        text-align: center;
+        margin-top: 76px;
+        @media only screen and (min-width:768px){
+            margin-top: 70px;
+        }
+    }
+    // sector de las redes sociales de la sección 1
+    .seccion_1_redes{
+        position: absolute;
+        left: 38px;
+        top: 355px;
+       
+
+        .sec1_red{
+            width: 23px;
+            display: block;
+            padding-top: 23px;
+            cursor: pointer;
+          
+        }
+        #icon_face{
+            width: 15px;
+            padding-left: 3px;
+        }
+
+        @media only screen and(max-width:768px){
+            display: none;
+            
+        }
+        
+        
+    }
+    // configuración del slide
+    .active, .punto {
+        cursor: pointer;
+        height: 3px;
+        width: 33px;
+        background-color: #bbb;
+        border-radius: 55px;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        @media only screen and(min-width:768px){
+            width: 55px;
+            margin-right: 6px;
+        
+        }
+    }
+
+    .punto:hover {
+        background-color: $secundario;
+    }
+
+    .deslizar {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: deslizar;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes deslizar {
+        from {opacity: 0.4;} 
+        to {opacity: 1;}
+      }
+
+}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

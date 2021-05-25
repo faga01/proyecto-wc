@@ -1,0 +1,42 @@
+.footer {
+    background-color: #161920;
+    padding: 30px 33px 90px;
+    #copyright {
+        color: $blanco;
+        font-size: 14px;
+        text-align: center;
+    }
+    #privacy {
+        color: $blanco;
+        margin-top: 22px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .boton_ayuda {
+        display: flex;
+        width: 120px;
+        height: 45px;
+        border: 1px solid $secundario;
+        border-style: none;
+        text-decoration: none;
+        right: 20px;
+        top: 557px;
+        cursor: pointer; 
+        background-color: #007d05;
+        padding: 10px;
+        position: fixed;
+        border-radius: 999rem;
+        justify-content:space-evenly;
+        padding-top: 15px;
+        p {
+            font-size: 15px;
+            font-weight: bold;
+            color: $blanco;
+        }
+        .logo_ayuda{
+            width: 20px;
+        }
+  }
+    
+}
+

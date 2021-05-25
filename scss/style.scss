@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* variables generales*/
+
+@import "components/variables";
+
+@import "components/mixins";
+
+html {
+    /*font-size: 62.5%;*/
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+        font-family: $fuentePrincipal;
+        //font-size: 16px;        
+}
+
+/* Primera seccion del homepage
+
+SECCION DEL SLIDE  */
+
+
+/* SECCION 1 */
+
+
+@import "components/seccion_1";
+
+//@import "mediaquery";
+
+/*  SECCION 2 */
+
+@import "components/seccion_2";
+
+/* SECCION 3 */
+
+@import "components/seccion_3";
+
+
+/* SECCION 4 */
+
+@import "components/seccion_4";
+
+
+/* SECCION 5 */
+
+@import "components/seccion_5";
+
+
+/* SECCION 6 */
+
+@import "components/seccion_6";
+
+/* seccion 7 */
+
+@import "components/seccion_7";
+
+/* FOOTER */
+
+@import "components/footer";
+

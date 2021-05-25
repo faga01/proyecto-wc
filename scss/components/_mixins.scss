@@ -1,0 +1,26 @@
+@mixin boton_transparente {   
+    border: 1.5px solid $blanco;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+} 
+
+@mixin boton_verde {
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;    
+    background-color: $secundario;
+    text-transform: uppercase;
+}
+
+@mixin titulo_art {
+    padding-left: 18px;
+    height: 45px;
+    line-height: 45px;
+    background-color: $secundario;
+    color: $blanco;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}    
