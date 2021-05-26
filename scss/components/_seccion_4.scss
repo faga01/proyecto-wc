@@ -18,21 +18,22 @@
 }
 
 .seccion_4_img {
-    background-image: url(../imagenes/img-5_1.png);
-    background-repeat: no-repeat;
+    background-image: url(../imagenes/img-5.png);
+    //background-repeat: no-repeat;
     background-size: cover;
     height: 229px;    
     position: relative;
+    width: auto;
     .img_icono {
         height: 35px;
         position: absolute;
-        left: 250px;
+        right: 20px;
         top: 18px;
     }
     .img_plato {
         height: 140px;
         position: absolute;
-        left: 150px;
+        right: 20px;
         top: 150px;
     }
 }
