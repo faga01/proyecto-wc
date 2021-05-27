@@ -95,36 +95,7 @@
 
     <!-- script del slide-->
 
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var puntos = document.getElementsByClassName("punto");
-
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < puntos.length; i++) {
-                puntos[i].className = puntos[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            puntos[slideIndex - 1].className += " active";
-
-        }
-    </script>
+    
 
    <!--  <script>
 
@@ -303,35 +274,46 @@
     <div class="seccion_5">
         <h2>FAQS</h2>
 
-        <button class="acordion">Wath designates a World Chef?</button>
+        <button class="acordion">
+           <h4>Wath designates a World Chef?</h4> 
+          
+        </button>
         <div class="panel">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh libero,
                 volutpat eget tempus at, mollis eu nulla. Donec ex mauris,
                 .</p>
         </div>
 
-        <button class="acordion"> Wath is the World Chef Box? </button>
+        <button class="acordion">
+            <h4>Wath is the World Chef Box?</h4> 
+        </button>
         <div class="panel">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh libero,
                 volutpat eget tempus at, mollis eu nulla. Donec ex mauris,
                 .</p>
         </div>
 
-        <button class="acordion"> How long is each World Chef Event? </button>
+        <button class="acordion">
+            <h4>How long is each World Chef Event?</h4> 
+        </button>
         <div class="panel">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh libero,
                 volutpat eget tempus at, mollis eu nulla. Donec ex mauris,
                 .</p>
         </div>
 
-        <button class="acordion"> where do i watch my event? </button>
+        <button class="acordion">
+            <h4>where do i watch my event?</h4> 
+        </button>
         <div class="panel">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh libero,
                 volutpat eget tempus at, mollis eu nulla. Donec ex mauris,
                 .</p>
         </div>
 
-        <button class="acordion"> Can i give World Chef as a gitf? </button>
+        <button class="acordion">
+            <h4>Can i give World Chef as a gitf?</h4>  
+        </button>
         <div class="panel">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh libero,
                 volutpat eget tempus at, mollis eu nulla. Donec ex mauris,
@@ -378,11 +360,6 @@
             audience.</p>
         <p id="privacy">Privacy - Terms and conditions</p>
         
-            
-        <!-- <a class="boton_ayuda" href="#">
-            <img class="logo_ayuda" src="/imagenes/ayuda.svg" alt="help">
-            <p>Ayuda</p> 
-        </a> -->
 
         <button class="boton_ayuda">
             <img class="logo_ayuda" src="/imagenes/icon-help.svg" alt="help">
@@ -392,23 +369,7 @@
 
     </footer>
 
-    <script>
-        var acc = document.getElementsByClassName("acordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "block";
-                }
-            });
-        }
-
-    </script>
+    <script src="/js/scripts.js"></script>
 
 </body>
 

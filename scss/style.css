@@ -943,7 +943,7 @@ SECCION DEL SLIDE  */
 .seccion_4_img .img_icono {
   height: 35px;
   position: absolute;
-  right: 20px;
+  right: 30px;
   top: 18px;
 }
 
@@ -1039,8 +1039,8 @@ SECCION DEL SLIDE  */
 /* SECCION 5 */
 .seccion_5 {
   border-top: 1px solid rgba(139, 131, 137, 0.1);
-  padding-top: 30px;
-  padding-bottom: 95px;
+  width: 80%;
+  margin: 0 auto 100px;
 }
 
 .seccion_5 h2 {
@@ -1055,10 +1055,14 @@ SECCION DEL SLIDE  */
   background-color: #f5f6fb;
   color: #625961;
   cursor: pointer;
-  padding: 20px;
-  width: 100%;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+  position: relative;
+  margin: 10px auto;
   border: none;
-  text-align: left;
+  text-align: justify;
   outline: none;
   font-size: 17px;
   font-weight: 600;
@@ -1068,6 +1072,29 @@ SECCION DEL SLIDE  */
 
 .seccion_5 .acordion .active, .seccion_5 .acordion:hover {
   background-color: #e7dfdf;
+}
+
+.seccion_5 .acordion h4 {
+  display: inline-block;
+  width: 80%;
+}
+
+.seccion_5 .acordion::after {
+  position: absolute;
+  content: "";
+  background-image: url(../imagenes/icon-expand.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  top: 33px;
+  right: 25px;
+}
+
+@media only screen and (min-width: 400px) {
+  .seccion_5 {
+    padding: 1.56rem 4rem 1.56rem 2.18rem;
+    position: relative;
+  }
 }
 
 .seccion_5 .panel {
