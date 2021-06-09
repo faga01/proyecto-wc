@@ -1,7 +1,7 @@
 .seccion_5 {
     border-top: 1px solid rgba($colorFuente, 0.1);
-    width: 80%;
-    margin: 0 auto 100px;
+    //width: 80%;
+    //margin: 0 auto 100px;
     //align-self: center;
     //padding-top: 30px;
     //padding-bottom: 95px;
@@ -16,60 +16,74 @@
         
     }
 
-    .acordion {
-        background-color: #f5f6fb;
-        color: #625961;
-        cursor: pointer;
-        //padding: 2rem 2rem .93rem 1.1rem;
-        padding-left: 1rem;  
-        padding-right: 2rem;
-        padding-top: 1.1rem;  
-        padding-bottom: 1.1rem; 
-        position: relative;   
-        margin: 10px auto;
-        border: none;
-        text-align: justify;
-        outline: none;
-        font-size: 17px;
-        font-weight: 600;
-        transition: 0.4s;
-        .active, &:hover {
-            background-color: #e7dfdf;
+    .seccion_5_preguntas{
+        width: 80%;
+        max-width: 1112px;
+        margin: 0 auto 100px;
+
+        .acordion {
+            background-color: #f5f6fb;
+            color: #625961;
+            cursor: pointer;
+            //padding: 2rem 2rem .93rem 1.1rem;
+            padding-left: 1rem;  
+            padding-right: 2rem;
+            padding-top: 1.1rem;  
+            padding-bottom: 1.1rem; 
+            position: relative;   
+            margin: 10px auto;
+            border: none;
+            text-align: justify;
+            outline: none;
+            font-size: 17px;
+            font-weight: 600;
+            transition: 0.4s;
+            .active, &:hover {
+                background-color: #e7dfdf;
+            } 
+            
+            h4{
+                display: inline-block;
+                width: 80%;
+            }
+            &::after{
+                position: absolute;
+                content: "";
+                background-image: url(../imagenes/icon-expand.svg);
+                background-repeat: no-repeat;
+                width: 20px;
+                height: 20px;
+                top: 33px;
+                right: 25px;
+                
+            } 
+            @media only screen and(min-width:400px){
+                padding: 1.56rem 4rem 1.56rem 2.18rem;
+                position: relative;
+                width: 100%;
+    
+            }
+
         } 
         
-        h4{
-            display: inline-block;
-            width: 80%;
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: #f5f6fb;
+            overflow:auto;
+            font-size: 12px;
+            letter-spacing: 0.7px;
         }
-        &::after{
-            position: absolute;
-            content: "";
-            background-image: url(../imagenes/icon-expand.svg);
-            background-repeat: no-repeat;
-            width: 20px;
-            height: 20px;
-            top: 33px;
-            right: 25px;
-            
-        } 
 
-    } 
-    
-    @media only screen and(min-width:400px){
-        padding: 1.56rem 4rem 1.56rem 2.18rem;
-        position: relative;
-    }
-
-    .panel {
-        padding: 0 18px;
-        display: none;
-        background-color: #f5f6fb;
-        overflow:auto;
-        font-size: 12px;
-        letter-spacing: 0.7px;
     }
 
 }
+ 
+/* .seccion_5 {
+    @media only screen and(min-width:400px){
+       margin: 0 auto;
+    }
+} */
 
 
 

@@ -881,7 +881,6 @@ SECCION DEL SLIDE  */
           flex-direction: column;
   padding-top: 36px;
   padding-bottom: 34px;
-  row-gap: 10px;
   padding-left: 25px;
 }
 
@@ -1039,8 +1038,6 @@ SECCION DEL SLIDE  */
 /* SECCION 5 */
 .seccion_5 {
   border-top: 1px solid rgba(139, 131, 137, 0.1);
-  width: 80%;
-  margin: 0 auto 100px;
 }
 
 .seccion_5 h2 {
@@ -1051,7 +1048,13 @@ SECCION DEL SLIDE  */
   color: #4d434b;
 }
 
-.seccion_5 .acordion {
+.seccion_5 .seccion_5_preguntas {
+  width: 80%;
+  max-width: 1112px;
+  margin: 0 auto 100px;
+}
+
+.seccion_5 .seccion_5_preguntas .acordion {
   background-color: #f5f6fb;
   color: #625961;
   cursor: pointer;
@@ -1070,16 +1073,16 @@ SECCION DEL SLIDE  */
   transition: 0.4s;
 }
 
-.seccion_5 .acordion .active, .seccion_5 .acordion:hover {
+.seccion_5 .seccion_5_preguntas .acordion .active, .seccion_5 .seccion_5_preguntas .acordion:hover {
   background-color: #e7dfdf;
 }
 
-.seccion_5 .acordion h4 {
+.seccion_5 .seccion_5_preguntas .acordion h4 {
   display: inline-block;
   width: 80%;
 }
 
-.seccion_5 .acordion::after {
+.seccion_5 .seccion_5_preguntas .acordion::after {
   position: absolute;
   content: "";
   background-image: url(../imagenes/icon-expand.svg);
@@ -1091,13 +1094,14 @@ SECCION DEL SLIDE  */
 }
 
 @media only screen and (min-width: 400px) {
-  .seccion_5 {
+  .seccion_5 .seccion_5_preguntas .acordion {
     padding: 1.56rem 4rem 1.56rem 2.18rem;
     position: relative;
+    width: 100%;
   }
 }
 
-.seccion_5 .panel {
+.seccion_5 .seccion_5_preguntas .panel {
   padding: 0 18px;
   display: none;
   background-color: #f5f6fb;
@@ -1106,6 +1110,11 @@ SECCION DEL SLIDE  */
   letter-spacing: 0.7px;
 }
 
+/* .seccion_5 {
+    @media only screen and(min-width:400px){
+       margin: 0 auto;
+    }
+} */
 /* SECCION 6 */
 .seccion_6 {
   background-image: url(../imagenes/bg-4_1.png);
@@ -1117,13 +1126,6 @@ SECCION DEL SLIDE  */
 
 .seccion_6 .seccion_6_contenido {
   padding: 50px 40px 50px 40px;
-  /* p {
-            color: $blanco;
-            padding-top: 12px;
-            font-size: 14px;
-            font-weight: normal;
-            line-height: 1.8;
-        } */
 }
 
 .seccion_6 .seccion_6_contenido h2 {
@@ -1131,6 +1133,14 @@ SECCION DEL SLIDE  */
   font-size: 36.2px;
   font-weight: 500;
   line-height: 1;
+  width: 230px;
+}
+
+@media only screen and (min-width: 700px) {
+  .seccion_6 .seccion_6_contenido h2 {
+    width: 389px;
+    padding-left: 43px;
+  }
 }
 
 .seccion_6 .seccion_6_contenido .seccion_6_boton {
@@ -1155,50 +1165,76 @@ SECCION DEL SLIDE  */
   border: 1.5px solid #00ac41;
 }
 
+@media only screen and (min-width: 700px) {
+  .seccion_6 .seccion_6_contenido .seccion_6_boton {
+    margin-left: 320px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .seccion_6 .seccion_6_contenido {
+    padding-left: 95px;
+    white-space: nowrap;
+  }
+}
+
 /* seccion 7 */
 .seccion_7 {
   background-color: #161920;
   color: #ffffff;
   padding: 30px 20px 20px;
-  border-bottom: 4px solid rgba(139, 131, 137, 0.6);
-  /* #label_email {
-        font-size: 12px;
-        text-transform: uppercase;
+  /* .seccion_7_redes {
+        display: flex;
+        justify-content: center;
+        column-gap: 35px;
+        margin-top: 50px;
+    }
+    .seccion_7_logo {
+        margin-top: 40px;
+        text-align: center;
     } */
 }
 
-.seccion_7 h2 {
+.seccion_7 .seccion_7_contenido h2 {
   font-weight: 500;
   margin-bottom: 13px;
+  font-size: 1.5rem;
 }
 
-.seccion_7 #email_registro {
-  display: inline-block;
-  width: 60%;
-  height: 40px;
+.seccion_7 .seccion_7_contenido .seccion_7_inscripcion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+
+.seccion_7 .seccion_7_contenido .seccion_7_inscripcion #email_registro {
+  width: 100%;
+  height: 38px;
   font-size: 16.3px;
   border-radius: 3px;
   color: #8b8389;
   background-color: #161920;
   border: 1px solid #ffffff;
   padding-left: 15px;
-  margin-top: 35px;
   margin-left: 5px;
+  text-align: left;
 }
 
-.seccion_7 #boton_registro {
-  height: 40px;
-  width: 90px;
+.seccion_7 .seccion_7_contenido .seccion_7_inscripcion #boton_registro {
+  height: 38px;
+  width: 140px;
+  margin-left: 6px;
   border-radius: 5px;
-  margin-top: 10px;
   border: none;
   color: rgba(139, 131, 137, 0.5);
-  font-size: 14.5px;
+  font-size: 14.3px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  margin-right: 5px;
 }
 
-.seccion_7 h5 {
+.seccion_7 .seccion_7_contenido h5 {
   text-align: end;
   margin-top: 33px;
   font-size: 12.5px;
@@ -1206,33 +1242,55 @@ SECCION DEL SLIDE  */
   font-weight: 500;
 }
 
-.seccion_7 .seccion_7_redes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-column-gap: 35px;
-          column-gap: 35px;
-  margin-top: 30px;
+@media only screen and (min-width: 600px) {
+  .seccion_7 .seccion_7_contenido {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    max-width: 320px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
 }
 
-.seccion_7 .seccion_7_logo {
-  margin-top: 40px;
-  text-align: center;
+@media only screen and (min-width: 600px) {
+  .seccion_7 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+  }
 }
 
 /* FOOTER */
 .footer {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #161920;
-  padding: 30px 33px 90px;
+  padding: 30px 0 92px;
+}
+
+.footer .footer_icons .footer_redes {
+  margin-left: -30px;
+  text-align: center;
+}
+
+.footer .footer_icons .footer_redes .icon {
+  padding-left: 30px;
+}
+
+.footer .footer_icons .footer_logo {
+  margin-top: 50px;
+  text-align: center;
+  border-bottom: 4px solid rgba(139, 131, 137, 0.6);
+  padding-bottom: 20px;
 }
 
 .footer #copyright {
   color: #ffffff;
   font-size: 14px;
   text-align: center;
+  margin-top: 30px;
 }
 
 .footer #privacy {
@@ -1252,7 +1310,7 @@ SECCION DEL SLIDE  */
   border-style: none;
   text-decoration: none;
   right: 20px;
-  top: 557px;
+  top: 565px;
   cursor: pointer;
   background-color: #007d05;
   padding: 10px;
@@ -1261,11 +1319,11 @@ SECCION DEL SLIDE  */
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding-top: 15px;
+  padding-top: 13px;
 }
 
 .footer .boton_ayuda p {
-  font-size: 15px;
+  font-size: 15.3px;
   font-weight: bold;
   color: #ffffff;
 }

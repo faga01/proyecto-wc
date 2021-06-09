@@ -1,17 +1,39 @@
 .footer {
+    box-sizing: border-box;
     background-color: #161920;
-    padding: 30px 33px 90px;
-    #copyright {
-        color: $blanco;
-        font-size: 14px;
-        text-align: center;
+    padding: 30px 0 92px;
+    .footer_icons{
+        .footer_redes{
+            margin-left: -30px;
+            text-align: center;
+            .icon{
+                padding-left: 30px;
+            }
+        } 
+        .footer_logo{
+            margin-top: 50px;
+            text-align: center;
+            border-bottom: 4px solid rgba($colorFuente, 0.6);
+            padding-bottom: 20px;
+
+         } 
+        
     }
-    #privacy {
-        color: $blanco;
-        margin-top: 22px;
-        font-size: 14px;
-        text-align: center;
-    }
+
+        #copyright {
+            color: $blanco;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 30px;
+            
+        }
+        #privacy {
+            color: $blanco;
+            margin-top: 22px;
+            font-size: 14px;
+            text-align: center;
+        }
+    
     .boton_ayuda {
         display: flex;
         width: 120px;
@@ -20,16 +42,16 @@
         border-style: none;
         text-decoration: none;
         right: 20px;
-        top: 557px;
+        top: 565px;
         cursor: pointer; 
         background-color: #007d05;
         padding: 10px;
         position: fixed;
         border-radius: 999rem;
         justify-content:space-evenly;
-        padding-top: 15px;
+        padding-top: 13px;
         p {
-            font-size: 15px;
+            font-size: 15.3px;
             font-weight: bold;
             color: $blanco;
         }

@@ -11,14 +11,13 @@
             font-size: 36.2px;
             font-weight: 500;
             line-height: 1;
+            width: 230px;
+            @media only screen and(min-width:700px){
+                width: 389px;
+                padding-left: 43px;
+            }
         }
-        /* p {
-            color: $blanco;
-            padding-top: 12px;
-            font-size: 14px;
-            font-weight: normal;
-            line-height: 1.8;
-        } */
+
         .seccion_6_boton {
             @include boton_transparente;
             background-color: rgba($negro,0.2);
@@ -34,6 +33,16 @@
                 color: $secundario;
                 border: 1.5px solid $secundario;
             }
+            @media only screen and(min-width:700px){
+                margin-left: 320px;
+            }
+            
+        }
+        
+
+        @media only screen and(min-width:480px){
+            padding-left: 95px;
+            white-space: nowrap;
         }
     }
       
